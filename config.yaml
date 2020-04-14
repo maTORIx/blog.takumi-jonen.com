@@ -10,7 +10,7 @@ publishDir: docs
 #########################################
 # This options specify where to look for the images used in this config
 # The default value is the "asset" directory of this theme
-# assetDir: "static"
+assetDir: "static"
 
 # Option to specify the default language of the theme
 # I.e., the landing language of your root 
@@ -105,7 +105,7 @@ params:
     # option to specify the subtitle in the homepage
     subtitle: 個人運営の自己満足ブログ
     # option to specify image in the homepage
-    image: "/images/avataaars.png" # worker.svg 
+    image: "/images/prof.png" # worker.svg 
     # option to specify the width of the image in the homepage
     imageWidth: 500px
 
@@ -114,36 +114,28 @@ params:
     # option to specify the logo in the footer
     # the starting folder is configure in "assetDir" of this file
     logo: "/images/refresh-square.svg"
-    # option to specify your contact email in the footer
-    email: 
-      link: name.surname@domain.com
-      title: My Email
-    # option to specify your linkedin profile in the footer
-    linkedin: 
-      link: your_linkedin_profile
-      title: My LinkedIn
     # option to specify your facebook account in the footer; 
     # **uncomment** the lines below to show in footer
-    # facebook: 
-    #   link: your.username
-    #   title: Facebook
+    facebook: 
+      link: https://www.facebook.com/takumi.jonen
+      title: Facebook
     # option to specify your github account in the footer; 
     # **uncomment** the below lines to show in footer
-    # github: 
-    #   link: username
-    #   title: Github
+    github: 
+      link: https://github.com/matorix
+      title: Github
     # option to specify your twitter username in the footer; 
     # **uncomment** the below lines to show in footer
-    # twitter: 
-    #    link: username
-    #    title: Twitter
+    twitter: 
+       link: https://twitter.com/matorixmatrix
+       title: Twitter
     # option to specify your instagram username in the footer; 
     # **uncomment** the below lines to show in footer
-    # instagram: 
-    #    link: username
-    #    title: Instagram
+    instagram: 
+       link: https://instagram.com/takumi_jonen
+       title: Instagram
     # option to specify the copyright in the footer
-    copyright: Julia The White - 2020
+    copyright: Takumi Jonen - 2020
 
 ###################################################################
 ################## multilanguage support options ##################
