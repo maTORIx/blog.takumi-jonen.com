@@ -182,10 +182,10 @@ Enfoce HTTPS はオンにしましょう。(カスタムドメインを設定し
 {{< container "gh-pages-settings-image" >}}
 |Column|タイプ|TTL|データ|
 |---|-----|---|-----|
-|blog|CNAME|1h|hoge.github.io|
+|blog|CNAME|1h|[github-username].github.io|
 {{< /container >}}
 
-matorixというのは私のユーザー名なので、適宜変更してください。
+ユーザー名は、適宜変更してください。
 
 この設定の反映には10分程度かかるので、しばらく時間を置いてアクセスしましょう。
 
