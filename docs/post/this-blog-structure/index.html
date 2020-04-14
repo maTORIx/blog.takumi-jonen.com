@@ -2,7 +2,9 @@
 <html lang="en-us">
   <head><link rel="icon" href="/favicon_main.svg"><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta http-equiv="x-ua-compatible" content="ie=edge" /><title>Personal website and blog</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge" /><meta property="og:url"  content="https://example.com/post/this-blog-structure/" />
+    <meta property="og:type" content="article" /><meta property="og:title" content="takumi.jonenのブログ実装備忘録" /><meta property="og:description" content="takumi.jonenのブログを作成するにあたって、利用した技術などについての解説。" /><meta property="og:image:width"  content="600" />
+        <meta property="og:image:height" content="342" /><meta property="og:image" content="https://example.com/post/this-blog-structure/images/blog_huae14e7583e80d189540bcc7726ed8247_1103643_600x0_resize_box_2.png" /><title>Personal website and blog</title>
     
 <link href="https://fonts.googleapis.com/css?family=Open&#43;Sans" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open&#43;Sans" rel="stylesheet">
@@ -116,45 +118,126 @@
     </div>
   </nav>
 <section class="section is-medium">
-        <div class="container">
-          
-            
-              <h1 class="title section-title">blog</h1>
-              <h5 class="subtitle is-5 is-muted"></h5>
-              <div class="divider"></div>        
-              <div class="section is-small">
-                <div class="columns">
-                    <div class="column is-4"><div class="box">
-      <figure class="image is-3by2">
-        <a href="/post/this-blog-structure/">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title is-2 section-title">takumi.jonenのブログ実装備忘録</h1>
+        <h5 class="subtitle is-5 is-muted"></h5>
+        <div class="divider"></div>
         
-           
-           
-          
-            <img src="/post/this-blog-structure/images/blog_huae14e7583e80d189540bcc7726ed8247_1103643_600x0_resize_box_2.png" style="height: auto; margin:auto" alt="">
-          
-        
-        </a>
-      </figure>
-      <h3 class="title is-5 refresh-summary-title">
-        takumi.jonenのブログ実装備忘録
-      </h3>
-      <p class="refresh-summary">takumi.jonenのブログを作成するにあたって、利用した技術などについての解説。</p> 
-      <div class="action has-text-right">
-        <a href="/post/this-blog-structure/" class="button is-primary">
-                Read more
-            </a>
+        <section class="section content has-text-justified">
+          <h1 id="概要">概要</h1>
+<p>このブログの主な構成要素は、下記の３つです。</p>
+<ul>
+<li>GitHub Pages</li>
+<li>Hugo</li>
+<li>Google Domains</li>
+</ul>
+<p>この記事では、上記２つを利用して個人ブログを立ち上げるまでの手順を紹介します。</p>
+<h1 id="利用したサービスの概要">利用したサービスの概要</h1>
+<h2 id="github-pages">GitHub Pages</h2>
+<p>プログラマー全員が利用すると言っても過言ではない、GitHub。</p>
+<p>そのサービスの一部には、「GitHub Pages」 という機能があることを知っている人は多いと思います。</p>
+<p>この「GitHub Pages」は単純に、GitHubにアップロードした静的ファイルをホスティングしてくれる機能です。</p>
+<p>最初からドメインの用意もしてくれますし、GitHubでPostすれば反映されるので、簡単かつ便利に静的ファイルを管理し公開することができます。</p>
+<p>そして、こんなに便利なGitHub Pagesですが、なんとお値段無料！。</p>
+<p>小さな個人ブログの運営用ホスティングサーバとしては、ダントツで便利な部類だと思われます。</p>
+<p>オススメです。</p>
+<h2 id="hugo">Hugo</h2>
+<p>これは、ブログの中身部分を、簡単に実装するためのツールです。</p>
+<p>Go言語製で速く動作するという特徴もありますが、それ以上に簡単かつ効率的に記事を書くことができる部分が非常に良いと思います。</p>
+<p>テーマの種類も多く、楽しいです。</p>
+<p>詳しくは、本家のサイトを見た方が良いので、下記のサイトを参照してください。</p>
+<p><a href="https://gohugo.io/">https://gohugo.io/</a></p>
+<h2 id="google-domains">Google Domains</h2>
+<p>Google社の運営するドメイン管理サービスです。</p>
+<p>他のさくらのドメインや、お名前.comとできることは大して変わらないと思います。</p>
+<p>詳しくは、下記を参照してください。</p>
+<p><a href="https://domains.google.com">https://domains.google.com</a></p>
+<h1 id="サイト構築の手順">サイト構築の手順</h1>
+<h2 id="1-hugoの初期設定">1. Hugoの初期設定</h2>
+<p>まずはじめに、Hugoをインストールします。</p>
+<p>インストール方法については、下記のサイトを参考にしてください。</p>
+<p><a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
+<p>その後、下記のように実行します。</p>
+<pre><code>$ hugo new site blog.hogehoge.com
+$ cd blog.hogehoge.com
+</code></pre><p>これで、ベースは作成できました。</p>
+<h2 id="2-hugoのテーマ設定">2. Hugoのテーマ設定</h2>
+<p>初期設定を終えたら、次にテーマを設定します。</p>
+<p><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
+<p>上記のサイトにアクセスすると、様々なHugoのテーマを選び、利用することができます。</p>
+<p>スマートフォンに対応しているかどうかや、表示速度、ライセンスなどに留意して、好きなテーマを選びましょう。</p>
+<p>このブログの場合は、 <a href="https://themes.gohugo.io/hugo-refresh/">こちら</a> を利用しています。</p>
+<p>設定は、テーマの紹介ページ下部に書かれている説明を見ながら行ってください。</p>
+<p><strong>以降の説明は全て、 <code>hugo-refresh</code> を利用した場合を想定します。</strong></p>
+<pre><code>$ cd blog.hogehoge.com
+$ git init
+$ git submodule add https://github.com/PippoRJ/hugo-refresh.git themes/hugo-refresh
+$ rm config.toml
+$ curl -O https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml
+</code></pre><p>この状態で、<code>hugo server</code> を実行すると、 localhost:1313 にてブログをプレビュー することができます。</p>
+<h2 id="3-hugoによるファイル生成場所の変更">3. Hugoによるファイル生成場所の変更</h2>
+<p>今回の記事では、ブログの公開にGitHub Pagesを利用するので、Hugoの設定を一部変更する必要があります。</p>
+<p>config.yaml (toml) に下記の欄を追加します。</p>
+<pre><code>publishDir: docs
+</code></pre><p>テーマによって、 <code>toml</code> を使っていたり、 <code>yaml</code> を使っていたりすると思うので適宜読み替えて追記してもらえれば幸いです。</p>
+<h2 id="4-その他configyamlによるhugoの設定">4. その他、config.yamlによるHugoの設定</h2>
+<p>hugoでは、config.yamlを使って、サイトの様々な部分（例えば、文章や画像など）を改変することができます。</p>
+<p>どのテーマでもほとんど共通の設定として、 <code>title</code>, <code>publishDir</code>, <code>baseURL</code> などがありますが、大半の設定はテーマによって異なります。</p>
+<p>記事以外の大半の情報についてはConfigを用いて変えられるので、自由に変更してください。</p>
+<h2 id="5-ドメインの取得">5. ドメインの取得</h2>
+<p>ドメインを取得しましょう。筆者のおすすめは domains.google.com です。（他にも、「さくらのドメイン」や「お名前.com」があります）</p>
+<p>基本的には、1年間で1500円ほど掛かりますが、インターネットを漁ると無料のドメインも手に入る場合があるので、お金がない人は調べると良いでしょう。</p>
+<h2 id="6-githubへのpush">6. GitHubへのPush</h2>
+<p>まずはじめに、GitHubのリポジトリを作成しましょう。この際、名前は好きに決めていただいて構いません。</p>
+<p>次に、そのリポジトリのURL(ここでは、 <a href="https://github.com/hoge/blog.hogehoge.com">https://github.com/hoge/blog.hogehoge.com</a> とします)を用いて、ターミナルでコマンドを実行します。下記のように実行してください。</p>
+<pre><code>$ cd blog.hogehoge.com
+$ git iinit
+$ git remote add origin https://github.com/hoge/blog.hogehoge.com
+$ echo resources &gt; .gitignore
+$ git add .
+$ git commit -m &quot;initial commit&quot;
+$ git push origin master
+</code></pre><p>これで、GitHubにサイトの情報を保存することができました。</p>
+<h2 id="7-github-pages-を用いた公開設定">7. GitHub Pages を用いた公開設定</h2>
+<p>次に、GitHub Pagesの設定をします。</p>
+<p>作成したリポジトリのページにアクセスし、ページの右上にある「Settings」をクリックすると設定画面が開きます。</p>
+<p>その一番下から2番目のHeaderに「github pages」の設定項目があると思います。ここを、変更します。</p>
+<p>まず、sourceを「master branch /docs folder」へ。</p>
+<p>custom domain を 購入したドメインに。</p>
+<p>Enfoce HTTPS はオンにしましょう。(カスタムドメインを設定してしばらくはオンにできないので、1時間程度待ちましょう。)</p>
+<p>下記の画像は、実際に blog.takumi-jonen.com が行っている GitHub Pages の設定です。</p>
+<p><img src="images/gh-pages-settings.png" alt="gh-pages-settings"></p>
+<h2 id="8-hugoで作ったサイトの公開">8. Hugoで作ったサイトの公開</h2>
+<p>最後の設定です。ドメインを購入したサイトで、CNAMEの設定を追加しましょう。GoogleDomainsの場合、次のように設定します。</p>
+<p><img src="images/domain.png" alt="gh-pages-settings"></p>
+<p>matorixというのは私のユーザー名なので、適宜変更してください。</p>
+<p>この設定の反映には10分程度かかるので、しばらく時間を置いてアクセスしましょう。</p>
+<p>これで、個人ブログの公開は完了です。</p>
+<h2 id="新規投稿とアップデート">新規投稿とアップデート</h2>
+<p>新規投稿は、とても簡単です。</p>
+<p>まず、下記のコマンドで新規投稿を作成します。</p>
+<pre><code>$ cd blog.hogehoge.com
+$ hugo new posts/[ページの名前]
+</code></pre><p>その後、 <code>contents/[ページの名前].md</code> にファイルが生成されますので、編集してください。</p>
+<p>編集し終えたら、下記のように実行します。</p>
+<pre><code>$ hugo
+$ git add .
+$ git commit -m &quot;[コメント]&quot;
+</code></pre><p>以上でアップデートは完了です。</p>
+<hr>
+<p>以上です。</p>
+<p>ブログをゼロから作成するのは、デザインやサーバー管理などで面倒な部分がありますが、外部サービスやHugoのようなツールを用いることで、ここまで簡単に個人ブログを開設することができます。</p>
+<p>興味があればぜひ、お試しください。</p>
+<p>それでは、今後も takumi.jonen のブログをよろしくお願いします。</p>
+
+        </section>
       </div>
     </div>
-  </div>
-
-                  </div>
-                
-              </div>
-            
-          
-        </div>
-    </section><footer class="footer footer-dark">
+  </div>  
+  </section>
+<footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
       <div class="column">
