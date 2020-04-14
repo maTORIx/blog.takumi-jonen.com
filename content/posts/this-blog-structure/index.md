@@ -5,10 +5,12 @@ draft: false
 hideLastModified: true
 summaryImage: "images/blog.png" 
 keepImageRatio: true
-tags: ["hugo", "programming", "blog"]
+tags: ["programming", "blog"]
 showInMenu: false
 summary: "takumi.jonenのブログを作成するにあたって、利用した技術などについての解説。"
 ---
+
+この記事では、このブログ「blog.takumi-jonen.com」を作成するに当たって利用したものや、作成手順について解説します。
 
 # 概要
 
