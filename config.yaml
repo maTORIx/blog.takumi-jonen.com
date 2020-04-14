@@ -1,5 +1,5 @@
 baseURL: https://blog.takumi-jonen.com
-languageCode: en-us
+languageCode: ja-jp
 title: Takumi Jonen Blog
 theme: hugo-refresh
 publishDir: docs
