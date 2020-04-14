@@ -126,7 +126,11 @@
         <div class="divider"></div>
         
         <section class="section content has-text-justified">
-          <p>この記事では、このブログ「blog.takumi-jonen.com」を作成するに当たって利用したものや、作成手順について解説します。</p>
+          <div class="columns is-centered container" id="header-image"><div class="column is-two-thirds">
+        <img src="images/blog.png" alt="header-image">
+    </div>
+</div>
+<p>この記事では、このブログ「blog.takumi-jonen.com」を作成するに当たって利用したものや、作成手順について解説します。</p>
 <h1 id="概要">概要</h1>
 <p>このブログの主な構成要素は、下記の３つです。</p>
 <ul>
@@ -213,10 +217,36 @@
 <p>custom domain を 購入したドメインに。</p>
 <p>Enfoce HTTPS はオンにしましょう。(カスタムドメインを設定してしばらくはオンにできないので、1時間程度待ちましょう。)</p>
 <p>下記の画像は、実際に blog.takumi-jonen.com が行っている GitHub Pages の設定です。</p>
-<p><img src="images/gh-pages-settings.png" alt="gh-pages-settings"></p>
+<div class="columns is-centered container">
+    <div class="column is-full">
+        <figure><img class="rounded-corners" src="/posts/this-blog-structure/images/gh-pages-settings_hu70f43b16a3e9dcea9fb15ee751a97314_226210_700x0_resize_box_2.png" 
+                width="700" height="570" ></figure>
+    </div>
+</div>
 <h2 id="8-hugoで作ったサイトの公開">8. Hugoで作ったサイトの公開</h2>
 <p>最後の設定です。ドメインを購入したサイトで、CNAMEの設定を追加しましょう。GoogleDomainsの場合、次のように設定します。</p>
-<p><img src="images/domain.png" alt="gh-pages-settings"></p>
+<div class="columns is-centered container" id="gh-pages-settings-image"><div class="column is-two-thirds">
+        <table>
+<thead>
+<tr>
+<th>Column</th>
+<th>タイプ</th>
+<th>TTL</th>
+<th>データ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>blog</td>
+<td>CNAME</td>
+<td>1h</td>
+<td>hoge.github.io</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
 <p>matorixというのは私のユーザー名なので、適宜変更してください。</p>
 <p>この設定の反映には10分程度かかるので、しばらく時間を置いてアクセスしましょう。</p>
 <p>これで、個人ブログの公開は完了です。</p>

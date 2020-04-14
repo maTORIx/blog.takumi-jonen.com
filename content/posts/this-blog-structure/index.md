@@ -10,6 +10,10 @@ showInMenu: false
 summary: "takumi.jonenのブログを作成するにあたって、利用した技術などについての解説。"
 ---
 
+{{< container "header-image" >}}
+![header-image](images/blog.png)
+{{< /container >}}
+
 この記事では、このブログ「blog.takumi-jonen.com」を作成するに当たって利用したものや、作成手順について解説します。
 
 # 概要
@@ -169,13 +173,17 @@ Enfoce HTTPS はオンにしましょう。(カスタムドメインを設定し
 
 下記の画像は、実際に blog.takumi-jonen.com が行っている GitHub Pages の設定です。
 
-![gh-pages-settings](images/gh-pages-settings.png)
+{{< figure src="images/gh-pages-settings.png" width="700" >}}
 
 ## 8. Hugoで作ったサイトの公開
 
 最後の設定です。ドメインを購入したサイトで、CNAMEの設定を追加しましょう。GoogleDomainsの場合、次のように設定します。
 
-![gh-pages-settings](images/domain.png)
+{{< container "gh-pages-settings-image" >}}
+|Column|タイプ|TTL|データ|
+|---|-----|---|-----|
+|blog|CNAME|1h|hoge.github.io|
+{{< /container >}}
 
 matorixというのは私のユーザー名なので、適宜変更してください。
 
