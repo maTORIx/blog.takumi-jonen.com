@@ -1,6 +1,6 @@
-baseURL: https://example.com
+baseURL: https://blog.takumi-jonen.com
 languageCode: en-us
-title: Personal website and blog
+title: Takumi Jonen Blog
 theme: hugo-refresh
 publishDir: docs
 # theme: ../..
