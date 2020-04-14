@@ -161,9 +161,10 @@
 <p>インストール方法については、下記のサイトを参考にしてください。</p>
 <p><a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
 <p>その後、下記のように実行します。</p>
-<pre><code>$ hugo new site blog.hogehoge.com
-$ cd blog.hogehoge.com
-</code></pre><p>これで、ベースは作成できました。</p>
+<div class="columns is-centered container"><div class="column is-full"><pre><code class="code-highlight language-shell">    $ hugo new site blog.hogehoge.com
+    $ cd blog.hogehoge.com</code></pre></div>
+</div>
+<p>これで、ベースは作成できました。</p>
 <h2 id="2-hugoのテーマ設定">2. Hugoのテーマ設定</h2>
 <p>初期設定を終えたら、次にテーマを設定します。</p>
 <p><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
@@ -172,17 +173,19 @@ $ cd blog.hogehoge.com
 <p>このブログの場合は、 <a href="https://themes.gohugo.io/hugo-refresh/">こちら</a> を利用しています。</p>
 <p>設定は、テーマの紹介ページ下部に書かれている説明を見ながら行ってください。</p>
 <p><strong>以降の説明は全て、 <code>hugo-refresh</code> を利用した場合を想定します。</strong></p>
-<pre><code>$ cd blog.hogehoge.com
-$ git init
-$ git submodule add https://github.com/PippoRJ/hugo-refresh.git themes/hugo-refresh
-$ rm config.toml
-$ curl -O https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml
-</code></pre><p>この状態で、<code>hugo server</code> を実行すると、 localhost:1313 にてブログをプレビュー することができます。</p>
+<div class="columns is-centered container"><div class="column is-full"><pre><code class="code-highlight language-shell">    $ cd blog.hogehoge.com
+    $ git init
+    $ git submodule add https://github.com/PippoRJ/hugo-refresh.git themes/hugo-refresh
+    $ rm config.toml
+    $ curl -O https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml</code></pre></div>
+</div>
+<p>この状態で、<code>hugo server</code> を実行すると、 localhost:1313 にてブログをプレビュー することができます。</p>
 <h2 id="3-hugoによるファイル生成場所の変更">3. Hugoによるファイル生成場所の変更</h2>
 <p>今回の記事では、ブログの公開にGitHub Pagesを利用するので、Hugoの設定を一部変更する必要があります。</p>
 <p>config.yaml (toml) に下記の欄を追加します。</p>
-<pre><code>publishDir: docs
-</code></pre><p>テーマによって、 <code>toml</code> を使っていたり、 <code>yaml</code> を使っていたりすると思うので適宜読み替えて追記してもらえれば幸いです。</p>
+<div class="columns is-centered container"><div class="column is-full"><pre><code class="code-highlight language-yaml">    publishDir: docs</code></pre></div>
+</div>
+<p>テーマによって、 <code>toml</code> を使っていたり、 <code>yaml</code> を使っていたりすると思うので適宜読み替えて追記してもらえれば幸いです。</p>
 <h2 id="4-その他configyamlによるhugoの設定">4. その他、config.yamlによるHugoの設定</h2>
 <p>hugoでは、config.yamlを使って、サイトの様々な部分（例えば、文章や画像など）を改変することができます。</p>
 <p>どのテーマでもほとんど共通の設定として、 <code>title</code>, <code>publishDir</code>, <code>baseURL</code> などがありますが、大半の設定はテーマによって異なります。</p>
@@ -193,14 +196,15 @@ $ curl -O https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleS
 <h2 id="6-githubへのpush">6. GitHubへのPush</h2>
 <p>まずはじめに、GitHubのリポジトリを作成しましょう。この際、名前は好きに決めていただいて構いません。</p>
 <p>次に、そのリポジトリのURL(ここでは、 <a href="https://github.com/hoge/blog.hogehoge.com">https://github.com/hoge/blog.hogehoge.com</a> とします)を用いて、ターミナルでコマンドを実行します。下記のように実行してください。</p>
-<pre><code>$ cd blog.hogehoge.com
-$ git iinit
-$ git remote add origin https://github.com/hoge/blog.hogehoge.com
-$ echo resources &gt; .gitignore
-$ git add .
-$ git commit -m &quot;initial commit&quot;
-$ git push origin master
-</code></pre><p>これで、GitHubにサイトの情報を保存することができました。</p>
+<div class="columns is-centered container"><div class="column is-full"><pre><code class="code-highlight language-shell">    $ cd blog.hogehoge.com
+    $ git iinit
+    $ git remote add origin https://github.com/hoge/blog.hogehoge.com
+    $ echo resources &gt; .gitignore
+    $ git add .
+    $ git commit -m &#34;initial commit&#34;
+    $ git push origin master</code></pre></div>
+</div>
+<p>これで、GitHubにサイトの情報を保存することができました。</p>
 <h2 id="7-github-pages-を用いた公開設定">7. GitHub Pages を用いた公開設定</h2>
 <p>次に、GitHub Pagesの設定をします。</p>
 <p>作成したリポジトリのページにアクセスし、ページの右上にある「Settings」をクリックすると設定画面が開きます。</p>
@@ -219,14 +223,16 @@ $ git push origin master
 <h2 id="新規投稿とアップデート">新規投稿とアップデート</h2>
 <p>新規投稿は、とても簡単です。</p>
 <p>まず、下記のコマンドで新規投稿を作成します。</p>
-<pre><code>$ cd blog.hogehoge.com
-$ hugo new posts/[ページの名前]
-</code></pre><p>その後、 <code>contents/[ページの名前].md</code> にファイルが生成されますので、編集してください。</p>
+<div class="columns is-centered container"><div class="column is-full"><pre><code class="code-highlight language-shell">    $ cd blog.hogehoge.com
+    $ hugo new posts/[ページの名前]</code></pre></div>
+</div>
+<p>その後、 <code>contents/[ページの名前].md</code> にファイルが生成されますので、編集してください。</p>
 <p>編集し終えたら、下記のように実行します。</p>
-<pre><code>$ hugo
-$ git add .
-$ git commit -m &quot;[コメント]&quot;
-</code></pre><p>以上でアップデートは完了です。</p>
+<div class="columns is-centered container"><div class="column is-full"><pre><code class="code-highlight language-shell">    $ hugo
+    $ git add .
+    $ git commit -m &#34;[コメント]&#34;</code></pre></div>
+</div>
+<p>以上でアップデートは完了です。</p>
 <hr>
 <p>以上です。</p>
 <p>ブログをゼロから作成するのは、デザインやサーバー管理などで面倒な部分がありますが、外部サービスやHugoのようなツールを用いることで、ここまで簡単に個人ブログを開設することができます。</p>

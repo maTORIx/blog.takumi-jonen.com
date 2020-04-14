@@ -74,10 +74,10 @@ https://gohugo.io/getting-started/installing/
 
 その後、下記のように実行します。
 
-```
-$ hugo new site blog.hogehoge.com
-$ cd blog.hogehoge.com
-```
+{{< codeWide language="shell" >}}
+    $ hugo new site blog.hogehoge.com
+    $ cd blog.hogehoge.com
+{{< /codeWide >}}
 
 これで、ベースは作成できました。
 
@@ -97,13 +97,14 @@ https://themes.gohugo.io/
 
 **以降の説明は全て、 `hugo-refresh` を利用した場合を想定します。**
 
-```
-$ cd blog.hogehoge.com
-$ git init
-$ git submodule add https://github.com/PippoRJ/hugo-refresh.git themes/hugo-refresh
-$ rm config.toml
-$ curl -O https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml
-```
+
+{{< codeWide language="shell" >}}
+    $ cd blog.hogehoge.com
+    $ git init
+    $ git submodule add https://github.com/PippoRJ/hugo-refresh.git themes/hugo-refresh
+    $ rm config.toml
+    $ curl -O https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleSite/config.yaml
+{{< /codeWide >}}
 
 この状態で、`hugo server` を実行すると、 localhost:1313 にてブログをプレビュー することができます。
 
@@ -113,9 +114,9 @@ $ curl -O https://raw.githubusercontent.com/PippoRJ/hugo-refresh/master/exampleS
 
 config.yaml (toml) に下記の欄を追加します。
 
-```
-publishDir: docs
-```
+{{< codeWide language="yaml" >}}
+    publishDir: docs
+{{< /codeWide >}}
 
 テーマによって、 `toml` を使っていたり、 `yaml` を使っていたりすると思うので適宜読み替えて追記してもらえれば幸いです。
 
@@ -140,15 +141,15 @@ hugoでは、config.yamlを使って、サイトの様々な部分（例えば�
 
 次に、そのリポジトリのURL(ここでは、 https://github.com/hoge/blog.hogehoge.com とします)を用いて、ターミナルでコマンドを実行します。下記のように実行してください。
 
-```
-$ cd blog.hogehoge.com
-$ git iinit
-$ git remote add origin https://github.com/hoge/blog.hogehoge.com
-$ echo resources > .gitignore
-$ git add .
-$ git commit -m "initial commit"
-$ git push origin master
-```
+{{< codeWide language="shell" >}}
+    $ cd blog.hogehoge.com
+    $ git iinit
+    $ git remote add origin https://github.com/hoge/blog.hogehoge.com
+    $ echo resources > .gitignore
+    $ git add .
+    $ git commit -m "initial commit"
+    $ git push origin master
+{{< /codeWide >}}
 
 これで、GitHubにサイトの情報を保存することができました。
 
@@ -188,20 +189,20 @@ matorixというのは私のユーザー名なので、適宜変更してくだ�
 
 まず、下記のコマンドで新規投稿を作成します。
 
-```
-$ cd blog.hogehoge.com
-$ hugo new posts/[ページの名前]
-```
+{{< codeWide language="shell" >}}
+    $ cd blog.hogehoge.com
+    $ hugo new posts/[ページの名前]
+{{< /codeWide >}}
 
 その後、 `contents/[ページの名前].md` にファイルが生成されますので、編集してください。
 
 編集し終えたら、下記のように実行します。
 
-```
-$ hugo
-$ git add .
-$ git commit -m "[コメント]"
-```
+{{< codeWide language="shell" >}}
+    $ hugo
+    $ git add .
+    $ git commit -m "[コメント]"
+{{< /codeWide >}}
 
 以上でアップデートは完了です。
 
