@@ -5,7 +5,7 @@ draft: false
 hideLastModified: true
 summaryImage: "images/prof.png" 
 keepImageRatio: true
-tags: ["blog", "takumi.jonen"]
+tags: []
 showInMenu: true
 summary: "このブログについて"
 
