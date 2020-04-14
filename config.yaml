@@ -101,9 +101,9 @@ params:
     # this options let you specify the text of the link to the homepage
     # linkText: "Homepage"  
     # option to specify the title in the homepage
-    title: Julia The White
+    title: Takumi Jonen Blog
     # option to specify the subtitle in the homepage
-    subtitle: Personal website and blog
+    subtitle: 個人運営の自己満足ブログ
     # option to specify image in the homepage
     image: "/images/avataaars.png" # worker.svg 
     # option to specify the width of the image in the homepage
