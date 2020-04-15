@@ -99,7 +99,7 @@ params:
     # it can be: "none", "menu", "footer" or "menu+footer"
     linkPosition: "footer" 
     # this options let you specify the text of the link to the homepage
-    # linkText: "Homepage"  
+    linkText: "Homepage"  
     # option to specify the title in the homepage
     title: Takumi Jonen Blog
     # option to specify the subtitle in the homepage
@@ -117,22 +117,22 @@ params:
     # option to specify your facebook account in the footer; 
     # **uncomment** the lines below to show in footer
     facebook: 
-      link: https://www.facebook.com/takumi.jonen
+      link: takumi.jonen
       title: Facebook
     # option to specify your github account in the footer; 
     # **uncomment** the below lines to show in footer
     github: 
-      link: https://github.com/matorix
+      link: matorix
       title: Github
     # option to specify your twitter username in the footer; 
     # **uncomment** the below lines to show in footer
     twitter: 
-       link: https://twitter.com/matorixmatrix
+       link: matorixmatrix
        title: Twitter
     # option to specify your instagram username in the footer; 
     # **uncomment** the below lines to show in footer
     instagram: 
-       link: https://instagram.com/takumi_jonen
+       link: takumi_jonen
        title: Instagram
     # option to specify the copyright in the footer
     copyright: Takumi Jonen - 2020
