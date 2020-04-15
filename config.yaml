@@ -3,6 +3,12 @@ languageCode: ja-jp
 title: Takumi Jonen Blog
 theme: hugo-refresh
 publishDir: docs
+googleAnalytics: UA-163575212-1
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 # theme: ../..
 
 #########################################

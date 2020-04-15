@@ -10,6 +10,16 @@ showInMenu: false
 summary: "takumi.jonenのブログを作成するにあたって、利用した技術などについての解説。"
 ---
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163575212-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163575212-1');
+</script>
+
 {{< container "header-image" >}}
 ![header-image](images/blog.png)
 {{< /container >}}
