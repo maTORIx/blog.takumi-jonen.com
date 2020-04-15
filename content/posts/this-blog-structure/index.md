@@ -11,6 +11,7 @@ summary: "takumi.jonenのブログを作成するにあたって、利用した�
 ---
 
 {{< analytics >}}
+{{< style >}}
 
 {{< container "header-image" >}}
 ![header-image](images/blog.png)
