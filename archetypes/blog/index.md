@@ -10,15 +10,9 @@ showInMenu: false
 summary: ""
 ---
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163575212-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+{{< analytics >}}
 
-  gtag('config', 'UA-163575212-1');
-</script>
+{{ template "_internal/google_analytics_async.html" . }}
 
 {{< container "header-image" >}}
 ![header-image](images/prof.png)
