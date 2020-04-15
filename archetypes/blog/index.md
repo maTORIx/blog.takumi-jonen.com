@@ -6,6 +6,14 @@ hideLastModified: true
 summaryImage: "images/prof.png" 
 keepImageRatio: true
 tags: []
-showInMenu: true
+showInMenu: false
 summary: ""
 ---
+
+{{< container "header-image" >}}
+![header-image](images/prof.png)
+{{< /container >}}
+
+About
+
+# Start
