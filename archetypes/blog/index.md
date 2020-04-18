@@ -11,8 +11,7 @@ summary: ""
 ---
 
 {{< analytics >}}
-
-{{ template "_internal/google_analytics_async.html" . }}
+{{< style >}}
 
 {{< container "header-image" >}}
 ![header-image](images/prof.png)
